@@ -11,7 +11,7 @@ if (!(Test-Path $tmpDir)) { mkdir $tmpDir -force}
 
 "I was run at: {0}" -f (Get-Date)  | Out-File -FilePath $log -Append
 
-Start-Transcript $log
+Start-Transcript $log -Append
 
 
 $SwitchTest = Get-VMSwitch -Name "NATSwitch" -ErrorAction SilentlyContinue

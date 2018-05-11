@@ -12,7 +12,7 @@ if (!(Test-Path $tmpDir)) { mkdir $tmpDir -force}
 
 "I was run at: {0}" -f (Get-Date)  | Out-File -FilePath $log -Append
 
-Start-Transcript $log
+Start-Transcript $log -Append
 
 Install-WindowsFeature Hyper-V -IncludeAllSubFeature -IncludeManagementTools -Verbose
 
