@@ -5,11 +5,10 @@
 
 Param
   (
-    [Parameter(Mandatory=$true,
-               ParameterSetName="WindowsServerURI",
-               HelpMessage="Enter the link to the windows server iso")]
-    [String[]]$URI
+   [Parameter(Mandatory=$True,Position=1)] 
+   [string] $URI
   ) 
+
 
 #this will be our temp folder - need it for download / logging
 $tmpDir = "c:\temp\" 
