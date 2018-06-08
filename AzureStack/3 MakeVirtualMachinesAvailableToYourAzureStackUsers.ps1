@@ -57,7 +57,7 @@ $ISOPath = ShowOpenFileDialog "Where is your Server .iso?" "c:\" "Iso files(*.is
 #New-Server2016VMImage -ISOPath $ISOPath -TenantId $TenantID -EnvironmentName "AzureStackAdmin" -Net35 $True -AzureStackCredentials $Credential
 
 # Add a Windows Server 2016 Evaluation VM Image.
-New-AzsServer2016VMImage -ISOPath $ISOPath -IncludeLatestCU -Net35 $true -Verbose
+New-AzsServer2016VMImage -ISOPath $ISOPath -IncludeLatestCU -Net35 $true -Verbose -Location local
 
 Get-AzsVMImage -Publisher MicrosoftWindowsServer -Offer WindowsServer -Version 1.0.0 -Sku 2016-Datacenter
 
